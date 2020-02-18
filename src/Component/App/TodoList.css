@@ -1,0 +1,295 @@
+.myId {
+  animation: FadeAnimation 0.5s ease-in .2s forwards;
+}
+
+@keyframes FadeAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.todoList-todos { margin-bottom: 30px; }
+
+.hideDiv { display:none; }
+.showDiv {
+	display:block;
+	position:absolute;
+	left: 200px;
+	top: 200px;
+	color: blue;
+}
+.hide { opacity: 0.1; }
+.normalTodo {
+  text-align: left;
+  margin: 0 7px 5px 0;
+}
+.largerTodo {
+  word-break: break-all;
+  max-width: 600px;;
+  text-align: left;
+  margin: 0 7px 5px 0;
+}
+.overflow {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 500px;
+}
+/* (Show || Hide) Completed btn */
+.btnCompleted {
+  color:white;
+  padding: 9px;
+  border-radius: 2px;
+  background: darkslategray;
+  border: 1px;
+  cursor: pointer;
+}.btnCompleted:hover { background: rgb(40, 70, 70); }
+/* Clear all btn */
+.btnClearAll {
+  color:white;
+  padding: 9px;
+  border-radius: 2px;
+  background: #202020;
+  border: 1px;
+  cursor: pointer;
+}.btnClearAll:hover { background: black; }
+/* History btn */
+.btnHistory {
+  color:white;
+  padding: 9px;
+  border-radius: 2px;
+  background: darkslateblue;
+  border: 1px;
+  cursor: pointer;
+}.btnHistory:hover { background: rgb(63, 53, 128); }
+.btnCompletedDisabled, .btnClearAllDisabled, .btnHistoryDisabled {
+  cursor: not-allowed;
+}
+/* Help btn */
+#centered-toggle-button {
+  color: white;
+  background: black;
+  position: absolute;
+  top: -36px;
+  right: -50px;
+  padding: 5px;
+  border: 1px solid#eee;
+}#centered-toggle-button:hover { color: forestgreen;cursor: pointer; }
+.toggle-true {
+  opacity: 0;
+  cursor: default;
+  display: none;
+}
+.TodoList {
+  margin: 2rem auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 600px;
+  background: #ff6666;
+  color: #fff;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+}
+.TodoListShowHistory {
+  margin: 2rem auto 2rem 440px;
+  padding: 2rem 3rem 3rem;
+  max-width: 600px;
+  background: #ff6666;
+  color: #fff;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+}
+.TodoList ul, .TodoListShowHistory ul {
+  margin-top: 2.6rem;
+  list-style: none;
+}
+
+.TodoList h1, .TodoListShowHistory h1 {
+  font-weight: normal;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.TodoList h1 span, .TodoListShowHistory h1 span {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+}
+
+.todo-enter { opacity: 0; }
+.todo-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.todo-exit { opacity: 1; }
+.todo-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms ease-in-out;
+}
+
+.Todo .Todo-buttons i {
+  display: inline-block;
+}
+.form-enter {
+  transform: translateY(77px);
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+}
+.form-enter-active {
+  transform: translateY(0%);
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+}
+.form-exit {
+  transform: translateY(0%);
+  position: absolute;
+}
+.form-exit-active {
+  transform: translateY(77px);
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+}
+
+.task-text-enter {
+  transform: translateY(-77px);
+  position: absolute;
+}
+.task-text-enter-active {
+  transform: translateY(0);
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+}
+.task-text-exit {
+  transform: translateY(0);
+  position: absolute;
+}
+.task-text-exit-active {
+  transform: translateY(-77px);
+  position: absolute;
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+/* extra more */
+
+.todoList-help {
+  position: relative;
+}
+.todoList-header { margin-top: -20px; }
+.todoList-header .span-header_2 { margin-top: -40px;margin-bottom: -5px; }
+.todoList-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.todoList-history-btn {
+  text-align: left;
+  margin-top: 6px;
+  margin-bottom: -40px;
+  margin-left: -45px;
+}
+.newTodo-timeOut {
+  color: white;
+  margin-left: -330px;
+  position: fixed;
+  bottom: 20px;
+  padding: 10px;
+  background: rgb(106, 115, 123);
+  display: inline-block;
+  border-radius: 0px 5px 2px 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.todoList-timeToChill {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -20px
+}.todoList-noTodos {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -35px
+}
+.todoList-pendingTask {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  margin: -15px 0 20px 0;
+}
+.todoList-completedTasks {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+/* Media styles */
+
+@media screen and (max-width: 768px) {
+  .TodoList { width: 500px; }
+  .Todo-edit-form input { width: 70%; }
+  .Todo-edit-form input, .Todo-edit-form button {
+    font-size: 15px;
+    padding: 0 0.8rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .TodoList { width: 300px;padding: 2rem 1rem 2rem; }
+  #centered-toggle-button {
+    position: absolute;
+    right: -15px;
+    top: -36px;
+  }
+  .TodoList h1, .TodoListShowHistory h1 { font-size: 25px; }
+  .todoList-header .span-header {
+    font-size: 0.75rem;
+    line-height: 1.3rem;
+    margin-top: 0.8rem;
+  }
+  .todoList-header .span-header_2 {
+    font-size: 0.75rem;
+    margin-top: -10px;
+    margin-bottom: 0.7rem;
+  }
+  .NewTodoForm label { font-size: 1rem;margin-bottom: 0.2rem; }
+  .NewTodoForm input, .NewTodoForm button { height: 2.5rem; }
+  .NewTodoForm input { padding: 0 0 0 1rem; }
+  .NewTodoForm button { width: 100%;margin-left: 0; }
+  .todoList-pendingTask { margin: -15px 0 20px 0; }
+  .todoList-completedTasks { margin: 20px 0 20px 0; }
+  .Todo { padding: 1.1rem 0.5rem 1.1rem 1rem;margin: 0 -18px 4px; }
+  .Todo-task, .large {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    height: 83px;
+    overflow: hidden auto;
+  }
+  .Todo-edit-form input { width: 65%; }
+  .Todo-edit-form input, .Todo-edit-form button {
+    height: 2rem;
+    font-size: 14px;
+    padding: 0 0.5rem;
+  }
+  .todoList-btns {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .btnCompleted, .btnHistory, .btnClearAll {
+    padding: 5px;
+    width: 100%;
+    font-size: 15px;
+  }
+  .btnCompleted, .btnHistory { margin-bottom: 7px; }
+  .btnCompleted { margin-right: 0; }
+  .btnHistory { margin-top: 0; }
+}
+

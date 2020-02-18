@@ -1,0 +1,211 @@
+
+
+#modal-container-clearAllTodo {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 4;
+}
+#modal-container-clearAllTodo.clearAllTodo {
+  transform: scale(1);
+}
+#modal-container-clearAllTodo.clearAllTodo .modal-background-clearAllTodo {
+  background: rgba(0, 0, 0, 0);
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo + .content {
+  animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo.out {
+  animation: quickScaleDown 0s .5s linear forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo.out .modal-background-clearAllTodo {
+  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo.out .modal-background-clearAllTodo .modal-clearAllTodo {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo.clearAllTodo.out + .content {
+  animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.modal-clearAllTodo {
+  margin-bottom: 8px;
+  z-index: 5;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo {
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo .modal-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+  
+.content {
+  min-height: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+  z-index: 0;
+}
+.content h1 {
+  padding: 75px 0 30px 0;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+.content .buttons {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.content .buttons .button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 10px;
+  background: red;
+  font-size: 18px;
+  background-color: #efefef;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.content .buttons .button:hover {
+  color: white;
+  background: #009bd5;
+}
+
+
+/* Media Styles */
+@media screen and (max-width: 768px) {
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo {
+    width: 400px;
+    padding: 35px;
+  }
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo h2 {
+    font-size: 24px;
+  }
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo {
+    width: 250px;
+    padding: 25px;
+  }
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo h2 {
+    font-size: 23px;
+  }
+  #modal-container-clearAllTodo .modal-background-clearAllTodo .modal-clearAllTodo p {
+    font-size: 15px;
+  }
+}
+
+
+/* Keyframes */
+
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+}
+@keyframes scaleBack {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+@keyframes scaleForward {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes quickScaleDown {
+  0% {
+    transform: scale(1);
+  }
+  99.9% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

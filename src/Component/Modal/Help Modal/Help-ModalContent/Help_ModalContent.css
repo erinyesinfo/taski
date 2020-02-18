@@ -1,0 +1,124 @@
+
+
+.help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.help-colors {
+    margin-bottom: 20px;
+}
+.help-localStorage {
+    display: block;
+    margin-bottom: 10px;
+}.help-localStorage label { cursor: pointer; }
+.timeoutMessage {
+    color: white;
+    margin-left: 650px;
+    position: fixed;
+    bottom: 80px;
+    padding: 10px;
+    background: rgb(106, 115, 123);
+    display: inline-block;
+    border-radius: 0px 5px 2px 5px;
+    cursor: pointer;
+    font-size: 14px; 
+}
+.help-p-addOwnColor { margin-top: -5px; }
+.help-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.help-input-color {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #eee;
+}
+
+/* info */
+
+/*.help-info {
+    margin-right: 20px;
+}*/
+.help-ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.help-fLi {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.help-fLi-color {
+    color: forestgreen;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.help-li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.help-li-color {
+    color: forestgreen;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.help-plus {
+    font-size: 20px;
+    color: white;
+    background: forestgreen;
+    border-radius: 30%;
+    height: 20px;
+    display: inline-flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.help-minus {
+    font-size: 25px;
+    color: white;
+    background: forestgreen;
+    border-radius: 30%;
+    height: 20px;
+    display: inline-flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.help-div { margin-left: 20px; }
+.help-ul-div-ul { margin-left: 30px; }
+.help-ok { margin-top: 10px; }
+
+@media screen and (max-width: 576px) {
+    .help-header { flex-direction: column; }
+    .help-setting-btn, .help-setting-btn button { width: 100%; }
+    .help-colors .help-localStorage {
+        display: flex;
+        align-items: baseline;
+    }.help-localStorage label { font-size: 14px; }
+    .help-description { font-size: 14px; }
+    .help-ul { margin-left: 0;font-size: 16px; }
+    .help-plus { font-size: 16px; }
+    .help-minus { font-size: 20px; }
+    .help-div { font-size: 14px; }
+    .help-colors-footer h3 { font-size: 18px; }
+    .help-form {
+        flex-direction: column;
+        align-items: center;           
+    }
+    .help-input-color { margin-bottom: 15px;padding: 7px; }
+    .help-div-save { width: 100%; }
+    .help-div-save button { width: 100%; }
+}

@@ -1,0 +1,15 @@
+
+
+.colors { display: flex;flex-wrap: wrap; }
+.colors-color {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .colors { justify-content: center;margin-top: 35px; }
+    .colors-color { width: 85px;height: 80px; }
+}

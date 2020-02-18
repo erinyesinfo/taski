@@ -1,0 +1,44 @@
+/* my style */
+
+.dvBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.restoreBtn {
+  color:white;
+  padding: 5px;
+  margin-top: 14px;
+}
+.clearBtn {
+  color:white;
+  padding: 5px;
+  margin-top: 14px;
+  margin-right: 5px;
+}
+.history-container {
+  transition: opacity 500ms ease-in-out;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}.history-ul { list-style: none;margin-left: 15px; display: grid; }
+.history-header { margin-top: 40px }
+.history-time {
+  float: right;
+  font-size: 14px;
+  margin-top: 5px;
+}.history-time .day { float: left }
+.history-time .time { float: right;margin-right: 30px }
+.history-ul .button { margin-bottom: 15px;margin-right: 30px }
+
+/* Media styles */
+
+@media screen and (max-width: 576px) {
+  .clearHistory { width: 100%;margin-bottom: 15px; }
+  .clearHistory .clearBtn { width: 100%; }
+  .restoreAll { width: 100%; }
+  .restoreAll .restoreBtn { width: 100%; }
+  .normalTodo, .largerTodo { font-size: 15px;font-weight: 700; }
+  .history-container { margin-top: 20px; }
+  .history-time { font-size: 11px; }
+}

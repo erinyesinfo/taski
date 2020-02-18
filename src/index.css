@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Texture-Wallpaper-5.jpg);
+  background-size: cover;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif, "Quicksand";
+  font-size: 1.1rem;
+  font-weight: 200;
+  height: max-content;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  /* background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); */
+}
